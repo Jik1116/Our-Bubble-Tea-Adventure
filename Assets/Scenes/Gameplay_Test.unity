@@ -119,37 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &29737206
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 29737207}
-  m_Layer: 0
-  m_Name: _groundCheckPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &29737207
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 29737206}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 180550055}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &73249236
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,6 +218,7 @@ GameObject:
   - component: {fileID: 138837512}
   - component: {fileID: 138837511}
   - component: {fileID: 138837514}
+  - component: {fileID: 138837515}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -374,6 +344,20 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &138837515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138837510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 223af9be969033348a128a548f0768f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackedObject: {fileID: 180550055}
+  offset: {x: 5.33, y: 2.73, z: 0}
 --- !u!1 &180550052
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,11 +465,10 @@ Transform:
   m_GameObject: {fileID: 180550052}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.59, y: -2.69, z: 0}
+  m_LocalPosition: {x: -5.36, y: -2.71, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 29737207}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &180550056
@@ -503,10 +486,16 @@ MonoBehaviour:
   forwardSpeed: 10
   maxSpeedX: 20
   brakeBoost: 7
-  jumpForce: 400
+  jumpForce: 10
+  gravityScale: 3
   jumpGravityMult: 0.7
-  jumpTrigger: 0
-  jumpCutTrigger: 0
+  coyoteTime: 1
+  onGroundTime: 0
+  _groundCheckOffset: 0.27
+  _groundCheckSize: {x: 0.33, y: 0.03}
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!50 &180550057
 Rigidbody2D:
   serializedVersion: 5
