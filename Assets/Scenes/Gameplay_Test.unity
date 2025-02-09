@@ -188,7 +188,7 @@ SpriteRenderer:
   m_Size: {x: 0.26, y: 0.33}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &73249238
@@ -470,6 +470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forwardSpeed: 10
   maxSpeedX: 20
+  brakeBoost: 7
 --- !u!50 &180550057
 Rigidbody2D:
   serializedVersion: 5
@@ -507,7 +508,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4830eff585ea13f43a4a3a263e1e3612, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1131,7 +1132,7 @@ SpriteRenderer:
   m_Size: {x: 0.26, y: 0.33}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1846401307

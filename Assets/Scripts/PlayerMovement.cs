@@ -39,9 +39,16 @@ public class PlayerMovement : MonoBehaviour
         float targetSpeed = directionalInput.x * maxSpeedX;
         targetSpeed = targetSpeed - rb.linearVelocityX;
         float force = forwardSpeed * (targetSpeed / maxSpeedX);
+
         if (Math.Sign(directionalInput.x) != Math.Sign(rb.linearVelocityX))
         {
+            // Apply a brake force if deccelerating
             force = force * brakeBoost;
+        }
+        else if (targetSpeed != 0 && (rb.linearVelocityX / targetSpeed) > 1.0f)
+        {
+            // Don't slow player down if they managed to conserve momentum
+            force = 0.0f;
         }
 
         rb.AddForce(force * Vector2.right, ForceMode2D.Force);
