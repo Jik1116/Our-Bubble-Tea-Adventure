@@ -3,21 +3,36 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+
+    [Header("Run")]
     public float forwardSpeed = 10.0f;
     public float maxSpeedX = 20.0f;
     public float brakeBoost = 5.0f;
 
+    [Header("Jump")]
     public float jumpForce = 400.0f;
     public float jumpGravityMult = 0.7f;
+    public float coyoteTime = 1.0f;
 
-    private float jumpPressedTime;
-    private float onGroundTime;
+    [Header("Timers")]
+    [SerializeField] private float jumpPressedTime;
+    [SerializeField] private float onGroundTime;
 
     private Vector2 directionalInput;
     private Rigidbody2D rb;
 
     private Vector2 force = Vector2.zero;
     private float initalGravityScale;
+
+    private bool jumpTrigger;
+    private bool jumpCutTrigger;
+
+    [Header("Checks")]
+    [SerializeField] private Transform _groundCheckPoint;
+    [SerializeField] private Vector2 _groundCheckSize = new Vector2(0.49f, 0.03f);
+    [Header("Layers & Tags")]
+    [SerializeField] private LayerMask _groundLayer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,15 +44,15 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        directionalInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        directionalInput = new Vector2(Input.GetAxisRaw("Horizontal"), 0.0f);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            OnJumpInputDown();
+            jumpTrigger = true;
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            OnJumpInputUp();
+            jumpCutTrigger = true;
         }
 
     }
@@ -45,8 +60,8 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         float deltaTime = Time.fixedDeltaTime;
-        onGroundTime += deltaTime;
-        jumpPressedTime += deltaTime;
+        onGroundTime -= deltaTime;
+        jumpPressedTime -= deltaTime;
 
         if (rb.linearVelocityY < 0.0f)
         {
@@ -71,24 +86,40 @@ public class PlayerMovement : MonoBehaviour
 
         rb.AddForce(force * Vector2.right);
         this.force.x = force;
-    }
 
-    void OnJumpInputUp()
-    {
-        rb.gravityScale = initalGravityScale;
-    }
+        if (Physics2D.OverlapBox(_groundCheckPoint.position, _groundCheckSize, 0, _groundLayer))
+        {
+            onGroundTime = coyoteTime;
+        }
 
-    void OnJumpInputDown()
-    {
-        jumpPressedTime = onGroundTime = 0;
+        if (jumpTrigger && onGroundTime > 0.0f)
+        {
+            jumpPressedTime = onGroundTime = 0;
 
-        rb.gravityScale = initalGravityScale * jumpGravityMult;
-        rb.AddForce(jumpForce * Vector2.up);
+            // Give player lower gravity when jump is held
+            rb.gravityScale = initalGravityScale * jumpGravityMult;
+
+            if (rb.linearVelocityY < 0)
+            {
+                rb.linearVelocityY = 0.0f;
+            }
+
+            rb.AddForce(jumpForce * Vector2.up);
+        }
+        if (jumpCutTrigger)
+        {
+            // Revert gravity to original state for a jump cut
+            rb.gravityScale = initalGravityScale;
+        }
+
+        jumpTrigger = false;
+        jumpCutTrigger = false;
     }
 
     void OnDrawGizmos()
     {
         // Gizmos.DrawLine(transform.position, transform.position + new Vector3(directionalInput.x, directionalInput.y, 0.0f));
         Gizmos.DrawLine(transform.position, transform.position + force.x * Vector3.right);
+        Gizmos.DrawCube(_groundCheckPoint.position, _groundCheckSize);
     }
 }
