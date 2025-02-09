@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float brakeBoost = 5.0f;
 
     [Header("Jump")]
-    public float jumpForce = 400.0f;
+    public float jumpForce = 10.0f;
     public float gravityScale = 3.0f;
     public float jumpGravityMult = 0.7f;
     public float coyoteTime = 1.0f;
@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
             force = 0.0f;
         }
 
-        rb.AddForce(force * Vector2.right);
+        rb.AddForce(force * Vector2.right, ForceMode2D.Force);
         this.force.x = force;
 
         if (Physics2D.OverlapBox(_groundCheckPosition(), _groundCheckSize, 0, _groundLayer))
@@ -97,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
                 rb.linearVelocityY = 0.0f;
             }
 
-            rb.AddForce(jumpForce * Vector2.up);
+            rb.AddForce(jumpForce * Vector2.up, ForceMode2D.Impulse);
         }
         if (jumpCutTrigger)
         {
