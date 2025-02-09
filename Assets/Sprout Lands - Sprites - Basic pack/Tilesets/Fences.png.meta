@@ -460,6 +460,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Fences_16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcec77a7cfeded144b1522960fb57693
+      internalID: -56661397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -482,6 +504,7 @@ TextureImporter:
       Fences_13: -978431827
       Fences_14: -1476107830
       Fences_15: 496688231
+      Fences_16: -56661397
       Fences_2: -908500815
       Fences_3: -33453568
       Fences_4: 1248316192

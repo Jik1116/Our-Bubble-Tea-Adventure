@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 68da0b4d9a2e9534e9b9654cf4c772fc
+guid: d3027a3b6ab85e44782385353c2c5f2b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7947428505529812925
-    second: Free_Chicken_House_0
+      213: -3078292803759954206
+    second: Mario world 1-1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,67 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Free_Chicken_House_0
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 11
-        width: 40
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: db70be55e10fa4e60800000000000000
-      internalID: 7947428505529812925
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Free_Chicken_House_1
-      rect:
-        serializedVersion: 2
-        x: 20
-        y: 0
-        width: 8
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 29f2294fda85eaa489a66014fe0c3b95
-      internalID: 202399560
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Free_Chicken_House_2
+      name: Mario world 1-1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 48
-        height: 48
+        width: 7168
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 89f46e6eb45ac9f4098f2934e0fdd8f5
-      internalID: -879329771
+      spriteID: 2e62f352105b745d0800000000000000
+      internalID: -3078292803759954206
       vertices: []
       indices: 
       edges: []
@@ -169,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f9d719f095181bb438430ba68c763f14
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -178,10 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Free_Chicken_House_0: 7947428505529812925
-      Free_Chicken_House_1: 202399560
-      Free_Chicken_House_2: -879329771
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

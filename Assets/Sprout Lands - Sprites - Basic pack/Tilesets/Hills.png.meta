@@ -790,7 +790,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 48
-        width: 16
+        width: 48
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1576,6 +1576,50 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Hills_67
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747cb9b99d3760f479b8324871582326
+      internalID: -1100264066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hills_68
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85744b6fd87b034096c8819abb4e6d8
+      internalID: 47883066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -1654,6 +1698,8 @@ TextureImporter:
       Hills_64: -1393053529
       Hills_65: 345992004
       Hills_66: -2099710757
+      Hills_67: -1100264066
+      Hills_68: 47883066
       Hills_7: 138967461
       Hills_8: -1831107346
       Hills_9: 1507231072
