@@ -20,8 +20,7 @@ public class CameraMovement : MonoBehaviour
     Vector3 CalculateCameraPos()
     {
         Vector3 currentPos = transform.position;
-        currentPos.x = trackedObject.position.x;
-        currentPos = currentPos + offset;
+        currentPos.x = trackedObject.position.x + offset.x;
         return currentPos;
     }
 
