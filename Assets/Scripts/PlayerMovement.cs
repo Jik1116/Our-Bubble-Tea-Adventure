@@ -69,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
         targetSpeed = targetSpeed - rb.linearVelocityX;
         float force = forwardSpeed * (targetSpeed / maxSpeedX);
 
+        isSkidding = false;
         if (Math.Sign(directionalInput.x) != Math.Sign(rb.linearVelocityX))
         {
             // Apply a brake force if deccelerating
