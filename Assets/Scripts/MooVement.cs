@@ -30,10 +30,10 @@ public class MooVement : MonoBehaviour
     void Update()
     {
         lingerTimeLeft -= Time.deltaTime;
+        if (lingerTimeLeft >= 0) return;
 
         float currentPos = transform.position.x;
-
-        if (currentPos < leftPos || currentPos > rightPos)
+        if ((direction < 0 && currentPos < leftPos) || (direction > 0 && currentPos > rightPos))
         {
             Vector3 pos = transform.position;
             pos.x = Math.Clamp(currentPos, leftPos, rightPos);
@@ -42,10 +42,7 @@ public class MooVement : MonoBehaviour
             direction = -direction;
             rb.linearVelocityX = 0.0f;
         }
-
-        if (lingerTimeLeft >= 0) return;
-
-        rb.linearVelocityX = direction * walkSpeed;
+        else rb.linearVelocityX = direction * walkSpeed;
     }
 
     void OnDrawGizmos()
