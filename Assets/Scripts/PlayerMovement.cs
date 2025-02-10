@@ -25,12 +25,12 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("For External Scripts")]
     public bool isSkidding;
+    public Vector2 directionalInput;
 
-    private Vector2 directionalInput;
     private Rigidbody2D rb;
-    private Vector2 force = Vector2.zero;
     private bool jumpTrigger;
     private bool jumpCutTrigger;
+    private Vector2 appliedForce;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -86,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         rb.AddForce(force * Vector2.right, ForceMode2D.Force);
-        this.force.x = force;
+        appliedForce.x = force;
 
         if (Physics2D.OverlapBox(_groundCheckPosition(), _groundCheckSize, 0, _groundLayer))
         {
@@ -106,6 +106,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             rb.AddForce(jumpForce * Vector2.up, ForceMode2D.Impulse);
+            appliedForce.y = jumpForce;
         }
         if (jumpCutTrigger)
         {
@@ -120,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
     void OnDrawGizmos()
     {
         // Gizmos.DrawLine(transform.position, transform.position + new Vector3(directionalInput.x, directionalInput.y, 0.0f));
-        Gizmos.DrawLine(transform.position, transform.position + force.x * Vector3.right);
+        Gizmos.DrawLine(transform.position, transform.position + appliedForce.x * Vector3.right);
         Gizmos.DrawCube(_groundCheckPosition(), _groundCheckSize);
     }
 
