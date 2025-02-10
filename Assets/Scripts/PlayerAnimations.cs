@@ -21,5 +21,6 @@ public class PlayerAnimations : MonoBehaviour
     {
         animator.SetBool("onGround", playerMovement.onGroundTime > 0);
         animator.SetFloat("xSpeed", Math.Abs(rb.linearVelocityX));
+        if (playerMovement.isSkidding) animator.SetTrigger("onSkid");
     }
 }

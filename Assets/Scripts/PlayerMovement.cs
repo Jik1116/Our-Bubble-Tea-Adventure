@@ -23,6 +23,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("Layers & Tags")]
     [SerializeField] private LayerMask _groundLayer;
 
+    [Header("For External Scripts")]
+    public bool isSkidding;
+
     private Vector2 directionalInput;
     private Rigidbody2D rb;
     private Vector2 force = Vector2.zero;
@@ -70,6 +73,10 @@ public class PlayerMovement : MonoBehaviour
         {
             // Apply a brake force if deccelerating
             force = force * brakeBoost;
+            if (force > 0.0f)
+            {
+                isSkidding = true;
+            }
         }
         else if (targetSpeed != 0 && (rb.linearVelocityX / targetSpeed) > 1.0f)
         {
