@@ -6243,6 +6243,7 @@ MonoBehaviour:
   _groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  isSkidding: 0
 --- !u!61 &793017505
 BoxCollider2D:
   m_ObjectHideFlags: 0
