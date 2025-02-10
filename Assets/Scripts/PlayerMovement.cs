@@ -74,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
         {
             // Apply a brake force if deccelerating
             force = force * brakeBoost;
-            if (force > 0.0f)
+            if (force != 0.0f && Math.Abs(rb.linearVelocityX) > (maxSpeedX * 0.4f))
             {
                 isSkidding = true;
             }
