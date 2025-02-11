@@ -22,6 +22,11 @@ public class WorldText2D : MonoBehaviour
 
     public void Trigger()
     {
+        if (lastTriggerTime < 0)
+        {
+            AudioSource audioSource = GetComponent<AudioSource>();
+            audioSource.PlayOneShot(audioSource.clip);
+        }
         lastTriggerTime = triggerTime;
     }
 }

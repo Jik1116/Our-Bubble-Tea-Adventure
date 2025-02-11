@@ -8,6 +8,9 @@ public class GetChickenPower : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Player"))
         {
+            AudioSource audioSource = GetComponent<AudioSource>();
+            audioSource.PlayOneShot(audioSource.clip);
+
             GameObject player = collider.gameObject;
             player.AddComponent<ChickenPower>();
             transform.SetParent(player.transform);
