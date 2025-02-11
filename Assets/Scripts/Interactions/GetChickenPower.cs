@@ -16,6 +16,7 @@ public class GetChickenPower : MonoBehaviour
             ChickenPower chickenPower = player.AddComponent<ChickenPower>();
             chickenPower.chickenAnimator = GetComponent<Animator>();
             chickenPower.chickenFlap = chickenFlap;
+            chickenPower.chickenSR = GetComponent<SpriteRenderer>();
 
             transform.parent.SetParent(player.transform);
             float offset = (player.GetComponents<ChickenPower>().Length) * playerHeadOffset;
