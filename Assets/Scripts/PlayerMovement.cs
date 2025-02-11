@@ -26,10 +26,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("For External Scripts")]
     public bool isSkidding;
     public Vector2 directionalInput;
+    public bool jumpTrigger;
+    public bool jumpCutTrigger;
 
     private Rigidbody2D rb;
-    private bool jumpTrigger;
-    private bool jumpCutTrigger;
     private Vector2 appliedForce;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -95,18 +95,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (jumpTrigger && onGroundTime > 0.0f)
         {
-            onGroundTime = 0;
-
-            // Give player lower gravity when jump is held
-            rb.gravityScale = gravityScale * jumpGravityMult;
-
-            if (rb.linearVelocityY < 0)
-            {
-                rb.linearVelocityY = 0.0f;
-            }
-
-            rb.AddForce(jumpForce * Vector2.up, ForceMode2D.Impulse);
-            appliedForce.y = jumpForce;
+            Jump();
         }
         if (jumpCutTrigger)
         {
@@ -116,6 +105,22 @@ public class PlayerMovement : MonoBehaviour
 
         jumpTrigger = false;
         jumpCutTrigger = false;
+    }
+
+    public void Jump()
+    {
+        onGroundTime = 0;
+
+        // Give player lower gravity when jump is held
+        rb.gravityScale = gravityScale * jumpGravityMult;
+
+        if (rb.linearVelocityY < 0)
+        {
+            rb.linearVelocityY = 0.0f;
+        }
+
+        rb.AddForce(jumpForce * Vector2.up, ForceMode2D.Impulse);
+        appliedForce.y = jumpForce;
     }
 
     void OnDrawGizmos()
