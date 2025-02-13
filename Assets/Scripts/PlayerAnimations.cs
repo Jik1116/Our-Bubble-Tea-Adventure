@@ -18,12 +18,11 @@ public class PlayerAnimations : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         animator.SetBool("onGround", playerMovement.onGroundTime > 0);
         animator.SetFloat("xSpeed", Math.Abs(rb.linearVelocityX));
-        if (playerMovement.isSkidding) animator.SetTrigger("onSkid");
+        animator.SetBool("onSkid", playerMovement.isSkidding);
         if (playerMovement.directionalInput.x != 0) sr.flipX = playerMovement.directionalInput.x < 0.0f;
     }
 }
