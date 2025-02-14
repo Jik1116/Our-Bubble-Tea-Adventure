@@ -29,6 +29,10 @@ public class PlayerMovement : MonoBehaviour
     public bool jumpTrigger;
     public bool jumpCutTrigger;
 
+    [Header("Debug")]
+    public bool showForce;
+    public bool showGroundCheck;
+
     private Rigidbody2D rb;
     private Vector2 appliedForce;
 
@@ -126,8 +130,8 @@ public class PlayerMovement : MonoBehaviour
     void OnDrawGizmos()
     {
         // Gizmos.DrawLine(transform.position, transform.position + new Vector3(directionalInput.x, directionalInput.y, 0.0f));
-        Gizmos.DrawLine(transform.position, transform.position + appliedForce.x * Vector3.right);
-        Gizmos.DrawCube(_groundCheckPosition(), _groundCheckSize);
+        if (showForce) Gizmos.DrawLine(transform.position, transform.position + appliedForce.x * Vector3.right);
+        if (showGroundCheck) Gizmos.DrawCube(_groundCheckPosition(), _groundCheckSize);
     }
 
     Vector3 _groundCheckPosition()
