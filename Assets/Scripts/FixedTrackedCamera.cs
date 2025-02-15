@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class CameraMovement : MonoBehaviour
 {
 
@@ -8,17 +9,18 @@ public class CameraMovement : MonoBehaviour
 
     public Vector3 offset;
     public Vector3 allowance;
-    public bool trackX;
-    public bool trackY;
+    [Flags]
+    public enum TrackedAxes
+    {
+        None = 0,
+        X = 1,
+        Y = 2,
+    }
+    [EnumButtons] public TrackedAxes trackedAxes;
 
     [Header("Debug")]
     public bool showCamera;
     public bool showTracked;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-    }
 
     // Update is called once per frame
     void Update()
@@ -31,8 +33,8 @@ public class CameraMovement : MonoBehaviour
         Vector3 currentPos = transform.position;
         Vector3 newPos = trackedObject.position + offset;
         Vector3 diff = newPos - currentPos;
-        if (trackX && Math.Abs(diff.x) >= allowance.x) currentPos.x = newPos.x;
-        if (trackY && Math.Abs(diff.y) >= allowance.y) currentPos.y = newPos.y;
+        if (trackedAxes.HasFlag(TrackedAxes.X) && Math.Abs(diff.x) >= allowance.x) currentPos.x = newPos.x;
+        if (trackedAxes.HasFlag(TrackedAxes.Y) && Math.Abs(diff.y) >= allowance.y) currentPos.y = newPos.y;
         return currentPos;
     }
 
@@ -43,8 +45,8 @@ public class CameraMovement : MonoBehaviour
         trackedPos.z = 0.0f;
         if (showCamera) Gizmos.DrawCube(trackedPos, Vector3.one);
         Vector3 trackedObjectPos = trackedObject.position;
-        if (trackX) trackedObjectPos.x = trackedPos.x - offset.x;
-        if (trackY) trackedObjectPos.y = trackedPos.y - offset.y;
+        if (trackedAxes.HasFlag(TrackedAxes.X)) trackedObjectPos.x = trackedPos.x - offset.x;
+        if (trackedAxes.HasFlag(TrackedAxes.Y)) trackedObjectPos.y = trackedPos.y - offset.y;
         if (showTracked) Gizmos.DrawCube(trackedObjectPos, Vector3.one);
     }
 }
