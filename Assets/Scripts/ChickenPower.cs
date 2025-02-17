@@ -8,7 +8,6 @@ public class ChickenPower : MonoBehaviour
 
     public Animator chickenAnimator;
     public AudioClip chickenFlap;
-    public SpriteRenderer chickenSR;
 
     void Start()
     {
@@ -19,7 +18,6 @@ public class ChickenPower : MonoBehaviour
 
     void Update()
     {
-        chickenSR.flipX = sr.flipX;
         if (playerMovement.onGroundTime > 0) usedChickenJump = false;
 
         if (playerMovement.jumpTrigger && !usedChickenJump && playerMovement.onGroundTime < 0)
