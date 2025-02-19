@@ -472,7 +472,7 @@ GameObject:
   - component: {fileID: 2131171590531478195}
   - component: {fileID: 125194615484531356}
   - component: {fileID: 7034656116740420890}
-  - component: {fileID: 7832483032828511609}
+  - component: {fileID: 2206834364929878071}
   m_Layer: 0
   m_Name: TalkInteract
   m_TagString: Untagged
@@ -557,7 +557,7 @@ MonoBehaviour:
   scripts:
   - {fileID: 11400000, guid: bc15aea007aa31543ade47c5e3315c49, type: 2}
   canvasController: {fileID: 0}
---- !u!114 &7832483032828511609
+--- !u!114 &2206834364929878071
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -566,6 +566,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 8609735595614378125}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49313ce1e951394499f985598acb83b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 11cc2dab496d79042ab8e484798825ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerFunc:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7034656116740420890}
+        m_TargetAssemblyTypeName: DialogController, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

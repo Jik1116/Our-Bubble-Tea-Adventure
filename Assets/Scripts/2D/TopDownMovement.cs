@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class TopDownMovement : MonoBehaviour
 {
@@ -13,9 +14,15 @@ public class TopDownMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    public void OnMoveAction(InputAction.CallbackContext context)
     {
-        directionalInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        directionalInput = context.ReadValue<Vector2>();
+    }
+
+    public void OnRoll(InputAction.CallbackContext context)
+    {
+
+
     }
 
     // Update is called once per frame
