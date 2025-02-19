@@ -15,11 +15,6 @@ public class WorldText2D : MonoBehaviour
         canvasGroup.alpha = lastTriggerTime > 0 ? 1.0f : 0.0f;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player")) Trigger();
-    }
-
     public void Trigger()
     {
         if (lastTriggerTime < 0)
