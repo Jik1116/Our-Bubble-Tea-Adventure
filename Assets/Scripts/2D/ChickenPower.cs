@@ -7,6 +7,7 @@ public class ChickenPower : MonoBehaviour
     private bool usedChickenJump = false;
 
     public Animator chickenAnimator;
+    public AudioSource chickenAudio;
     public AudioClip chickenFlap;
 
     void Start()
@@ -22,7 +23,7 @@ public class ChickenPower : MonoBehaviour
 
         if (playerMovement.jumpTrigger && !usedChickenJump && playerMovement.onGroundTime < 0)
         {
-            GetComponent<AudioSource>().PlayOneShot(chickenFlap);
+            chickenAudio.PlayOneShot(chickenFlap);
             usedChickenJump = true;
             playerMovement.Jump();
         }

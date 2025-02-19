@@ -9,18 +9,22 @@ public class GetChickenPower : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Player"))
         {
+            GameObject player = collider.gameObject;
+            int offset = player.GetComponents<ChickenPower>().Length;
+
             AudioSource audioSource = GetComponent<AudioSource>();
+            audioSource.pitch = 1f + (offset * 0.2f);
             audioSource.PlayOneShot(audioSource.clip);
 
-            GameObject player = collider.gameObject;
             ChickenPower chickenPower = player.AddComponent<ChickenPower>();
             chickenPower.chickenAnimator = GetComponent<Animator>();
+            chickenPower.chickenAudio = GetComponent<AudioSource>();
             chickenPower.chickenFlap = chickenFlap;
 
             transform.parent.SetParent(player.transform);
-            float offset = (player.GetComponents<ChickenPower>().Length) * playerHeadOffset;
+            float pos_offset = (offset + 1) * playerHeadOffset;
             // 3 is the players local scale, currently hardcoded due to animation changing the player scale
-            transform.parent.position = player.transform.position + 3 * new Vector3(0, offset, 0);
+            transform.parent.position = player.transform.position + 3 * new Vector3(0, pos_offset, 0);
             enabled = false;
         }
     }
