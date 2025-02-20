@@ -4,6 +4,9 @@ using UnityEngine.InputSystem;
 public class TopDownMovement : MonoBehaviour
 {
     public float speed = 2.0f;
+    public float boost = 2.0f;
+    private float currentBoost = 0f;
+    private float currentDecay = 1.0f;
 
     private Vector2 directionalInput;
     private Rigidbody2D rb;
@@ -21,13 +24,22 @@ public class TopDownMovement : MonoBehaviour
 
     public void OnRoll(InputAction.CallbackContext context)
     {
+        if (!context.performed) return;
+        currentBoost = boost;
+        currentDecay = 0.8f;
+    }
 
-
+    public void OnRollCharge(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+        currentBoost = boost * 5.0f;
+        currentDecay = 0.9f;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.linearVelocity = directionalInput.normalized * speed;
+        rb.linearVelocity = directionalInput.normalized * speed * (1f + currentBoost);
+        currentBoost *= currentDecay;
     }
 }
