@@ -10,4 +10,9 @@ public class DialogController : MonoBehaviour
     {
         canvasController.StartDialog(scripts[currentScript]);
     }
+
+    public void SetScript(int scriptNumber)
+    {
+        currentScript = scriptNumber;
+    }
 }

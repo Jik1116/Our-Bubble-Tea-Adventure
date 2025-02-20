@@ -6,6 +6,7 @@ public class ChickenPower : MonoBehaviour
     private PlayerMovement playerMovement;
     private bool usedChickenJump = false;
 
+    public GameObject chicken;
     public Animator chickenAnimator;
     public AudioSource chickenAudio;
     public AudioClip chickenFlap;

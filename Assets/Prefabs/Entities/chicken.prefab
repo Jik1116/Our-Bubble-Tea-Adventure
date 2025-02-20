@@ -270,6 +270,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHeadOffset: 0.1
   chickenFlap: {fileID: 8300000, guid: 882f3493c3eb1834a94e3f6f84a81e53, type: 3}
+  foundChicken:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8848886818173661192
 GameObject:
   m_ObjectHideFlags: 0

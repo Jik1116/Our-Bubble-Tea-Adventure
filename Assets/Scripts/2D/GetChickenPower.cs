@@ -1,12 +1,16 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GetChickenPower : MonoBehaviour
 {
     public float playerHeadOffset = 0.1f;
     public AudioClip chickenFlap;
 
+    private bool hasTrigger = false;
+
     void OnTriggerEnter2D(Collider2D collider)
     {
+        if (hasTrigger) return;
         if (collider.gameObject.CompareTag("Player"))
         {
             GameObject player = collider.gameObject;
@@ -17,6 +21,7 @@ public class GetChickenPower : MonoBehaviour
             audioSource.PlayOneShot(audioSource.clip);
 
             ChickenPower chickenPower = player.AddComponent<ChickenPower>();
+            chickenPower.chicken = this.gameObject;
             chickenPower.chickenAnimator = GetComponent<Animator>();
             chickenPower.chickenAudio = GetComponent<AudioSource>();
             chickenPower.chickenFlap = chickenFlap;
@@ -26,6 +31,7 @@ public class GetChickenPower : MonoBehaviour
             // 3 is the players local scale, currently hardcoded due to animation changing the player scale
             transform.parent.position = player.transform.position + 3 * new Vector3(0, pos_offset, 0);
             enabled = false;
+            hasTrigger = true;
         }
     }
 }
