@@ -94,7 +94,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -108,7 +108,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -153,6 +153,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -160,10 +173,10 @@ TextureImporter:
       name: white icons_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 34
-        width: 14
-        height: 11
+        x: 0
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,10 +195,10 @@ TextureImporter:
       name: white icons_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 34
-        width: 14
-        height: 11
+        x: 16
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,10 +217,10 @@ TextureImporter:
       name: white icons_2
       rect:
         serializedVersion: 2
-        x: 33
-        y: 33
-        width: 14
-        height: 13
+        x: 32
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,10 +239,10 @@ TextureImporter:
       name: white icons_3
       rect:
         serializedVersion: 2
-        x: 49
-        y: 33
-        width: 14
-        height: 14
+        x: 48
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,10 +261,10 @@ TextureImporter:
       name: white icons_4
       rect:
         serializedVersion: 2
-        x: 66
-        y: 37
-        width: 12
-        height: 11
+        x: 64
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,10 +283,10 @@ TextureImporter:
       name: white icons_5
       rect:
         serializedVersion: 2
-        x: 69
+        x: 80
         y: 32
-        width: 6
-        height: 6
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,10 +305,10 @@ TextureImporter:
       name: white icons_6
       rect:
         serializedVersion: 2
-        x: 81
-        y: 33
-        width: 14
-        height: 14
+        x: 0
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -314,10 +327,10 @@ TextureImporter:
       name: white icons_7
       rect:
         serializedVersion: 2
-        x: 5
-        y: 21
-        width: 6
-        height: 11
+        x: 16
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,10 +349,10 @@ TextureImporter:
       name: white icons_8
       rect:
         serializedVersion: 2
-        x: 5
+        x: 32
         y: 16
-        width: 6
-        height: 6
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -358,9 +371,9 @@ TextureImporter:
       name: white icons_9
       rect:
         serializedVersion: 2
-        x: 18
+        x: 48
         y: 16
-        width: 12
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -380,10 +393,10 @@ TextureImporter:
       name: white icons_10
       rect:
         serializedVersion: 2
-        x: 34
-        y: 18
-        width: 13
-        height: 11
+        x: 64
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -402,10 +415,10 @@ TextureImporter:
       name: white icons_11
       rect:
         serializedVersion: 2
-        x: 48
-        y: 17
+        x: 80
+        y: 16
         width: 16
-        height: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -424,10 +437,10 @@ TextureImporter:
       name: white icons_12
       rect:
         serializedVersion: 2
-        x: 65
-        y: 17
-        width: 14
-        height: 14
+        x: 0
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -446,10 +459,10 @@ TextureImporter:
       name: white icons_13
       rect:
         serializedVersion: 2
-        x: 81
-        y: 17
-        width: 14
-        height: 13
+        x: 16
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -468,10 +481,10 @@ TextureImporter:
       name: white icons_14
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 14
-        height: 14
+        x: 32
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -490,10 +503,10 @@ TextureImporter:
       name: white icons_15
       rect:
         serializedVersion: 2
-        x: 17
-        y: 5
-        width: 14
-        height: 6
+        x: 48
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -512,10 +525,10 @@ TextureImporter:
       name: white icons_16
       rect:
         serializedVersion: 2
-        x: 33
-        y: 1
-        width: 14
-        height: 13
+        x: 64
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -534,10 +547,10 @@ TextureImporter:
       name: white icons_17
       rect:
         serializedVersion: 2
-        x: 49
-        y: 2
-        width: 15
-        height: 12
+        x: 80
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -552,55 +565,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: white icons_18
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 1
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c3de4258480422c70800000000000000
-      internalID: 8944782747824876860
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: white icons_19
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 1
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e56614733542d6b40800000000000000
-      internalID: 5435040265133975134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 85dca1ffa8d8963499eb32a8caf5e034
     internalID: 0
     vertices: []
     indices: 
@@ -620,8 +589,6 @@ TextureImporter:
       white icons_15: 7286319691059759279
       white icons_16: 1892061197650281486
       white icons_17: -1495979116100862316
-      white icons_18: 8944782747824876860
-      white icons_19: 5435040265133975134
       white icons_2: -8765648617134975457
       white icons_3: 7717697863676519553
       white icons_4: -2339387304026296458
