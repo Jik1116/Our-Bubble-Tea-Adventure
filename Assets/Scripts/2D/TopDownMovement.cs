@@ -5,6 +5,7 @@ public class TopDownMovement : MonoBehaviour
 {
     public float speed = 2.0f;
     public float boost = 2.0f;
+    public float boostCharge = 10.0f;
     private float currentBoost = 0f;
     private float currentDecay = 1.0f;
 
@@ -14,6 +15,7 @@ public class TopDownMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Time.timeScale = 1.0f;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -32,7 +34,7 @@ public class TopDownMovement : MonoBehaviour
     public void OnRollCharge(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
-        currentBoost = boost * 5.0f;
+        currentBoost = boostCharge;
         currentDecay = 0.9f;
     }
 
