@@ -10,6 +10,7 @@ public class RandomWalk : MonoBehaviour
     private Vector2 direction;
     void Start()
     {
+        lastWalk = Random.Range(0f, walkTiming);
         rb = GetComponent<Rigidbody2D>();
     }
 
