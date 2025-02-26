@@ -84,7 +84,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -133,15 +133,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Basic_Plants_0
+      name: wheat_bag
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 16
-        width: 14
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -155,15 +155,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic_Plants_1
+      name: wheat_0
       rect:
         serializedVersion: 2
         x: 16
         y: 16
-        width: 15
-        height: 10
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -177,15 +177,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic_Plants_2
+      name: wheat_1
       rect:
         serializedVersion: 2
         x: 32
         y: 16
-        width: 17
-        height: 14
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -199,15 +199,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic_Plants_3
+      name: wheat_2
       rect:
         serializedVersion: 2
         x: 48
         y: 16
-        width: 17
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -221,15 +221,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic_Plants_4
+      name: wheat_3
       rect:
         serializedVersion: 2
         x: 64
         y: 16
-        width: 17
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -243,7 +243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic_Plants_5
+      name: wheat_full
       rect:
         serializedVersion: 2
         x: 80
@@ -251,7 +251,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -265,15 +265,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic_Plants_6
+      name: beetroot_bag
       rect:
         serializedVersion: 2
-        x: 81
-        y: 1
-        width: 14
-        height: 15
+        x: 0
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -287,15 +287,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic_Plants_7
+      name: beetroot_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 16
         y: 0
-        width: 14
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -309,15 +309,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic_Plants_8
+      name: beetroot_1
       rect:
         serializedVersion: 2
-        x: 21
+        x: 32
         y: 0
-        width: 7
-        height: 7
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -331,15 +331,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic_Plants_9
+      name: beetroot_2
       rect:
         serializedVersion: 2
-        x: 35
+        x: 48
         y: 0
-        width: 11
-        height: 11
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -353,15 +353,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic_Plants_10
+      name: beetroot_3
       rect:
         serializedVersion: 2
-        x: 48
+        x: 64
         y: 0
-        width: 15
-        height: 14
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -375,15 +375,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic_Plants_11
+      name: beetroot_full
       rect:
         serializedVersion: 2
-        x: 64
+        x: 80
         y: 0
         width: 16
-        height: 15
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -400,7 +400,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 236f28873c8b497438651ccf5d9d2353
     internalID: 0
     vertices: []
     indices: 
@@ -410,18 +410,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Basic_Plants_0: 8474670595409141939
-      Basic_Plants_1: -7396305697263286651
-      Basic_Plants_10: 6330426110891526577
-      Basic_Plants_11: -8046388129001153825
-      Basic_Plants_2: 3868332834043518974
-      Basic_Plants_3: 6812107102740459891
-      Basic_Plants_4: -4968072622433853253
-      Basic_Plants_5: -8553166176874854604
-      Basic_Plants_6: 2018227706277626003
-      Basic_Plants_7: -167575426429258219
-      Basic_Plants_8: -1044968166336746788
-      Basic_Plants_9: 934722249265953344
+      beetroot_0: -167575426429258219
+      beetroot_1: -1044968166336746788
+      beetroot_2: 934722249265953344
+      beetroot_3: 6330426110891526577
+      beetroot_bag: 2018227706277626003
+      beetroot_full: -8046388129001153825
+      wheat_0: -7396305697263286651
+      wheat_1: 3868332834043518974
+      wheat_2: 6812107102740459891
+      wheat_3: -4968072622433853253
+      wheat_bag: 8474670595409141939
+      wheat_full: -8553166176874854604
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

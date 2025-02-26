@@ -72,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,7 +121,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Paths_0
+      name: path_front_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,7 +143,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Paths_1
+      name: path_front_1
       rect:
         serializedVersion: 2
         x: 0
@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Paths_2
+      name: circle_path_0
       rect:
         serializedVersion: 2
         x: 16
@@ -187,7 +187,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Paths_3
+      name: circle_path_1
       rect:
         serializedVersion: 2
         x: 32
@@ -209,7 +209,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Paths_4
+      name: path_front_2
       rect:
         serializedVersion: 2
         x: 0
@@ -231,7 +231,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Paths_5
+      name: circle_path_2
       rect:
         serializedVersion: 2
         x: 16
@@ -253,7 +253,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Paths_6
+      name: circle_path_3
       rect:
         serializedVersion: 2
         x: 32
@@ -275,7 +275,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Paths_7
+      name: path_sideways_0
       rect:
         serializedVersion: 2
         x: 16
@@ -297,7 +297,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Paths_8
+      name: path_sideways_1
       rect:
         serializedVersion: 2
         x: 32
@@ -319,7 +319,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Paths_9
+      name: path_sideways_2
       rect:
         serializedVersion: 2
         x: 48
@@ -340,72 +340,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Paths_10
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e9f260d9c9b35bc46a68d7162f4775b0
-      internalID: -2110161386
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Paths_11
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9918906cc5b23746bd78539fbedf529
-      internalID: -113981340
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Paths_12
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 48
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a0f1c9e7333416044a1358fed320be04
-      internalID: 1300251832
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -420,19 +354,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Paths_0: -3975216232760467619
-      Paths_1: -1571907141483303039
-      Paths_10: -2110161386
-      Paths_11: -113981340
-      Paths_12: 1300251832
-      Paths_2: 4341512326976455624
-      Paths_3: -8907765607471424367
-      Paths_4: 8795567671476409454
-      Paths_5: -82048364263676023
-      Paths_6: -3197776780982355621
-      Paths_7: -6216437916036447127
-      Paths_8: -1642885150
-      Paths_9: 1770827140
+      circle_path_0: 4341512326976455624
+      circle_path_1: -8907765607471424367
+      circle_path_2: -82048364263676023
+      circle_path_3: -3197776780982355621
+      path_front_0: -3975216232760467619
+      path_front_1: -1571907141483303039
+      path_front_2: 8795567671476409454
+      path_sideways_0: -6216437916036447127
+      path_sideways_1: -1642885150
+      path_sideways_2: 1770827140
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

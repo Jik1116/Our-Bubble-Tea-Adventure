@@ -96,7 +96,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -145,7 +145,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_0
+      name: Mochi_Front
       rect:
         serializedVersion: 2
         x: 16
@@ -153,7 +153,7 @@ TextureImporter:
         width: 16
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -167,7 +167,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_1
+      name: Mochi_Front_Droop
       rect:
         serializedVersion: 2
         x: 64
@@ -175,7 +175,7 @@ TextureImporter:
         width: 16
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -189,7 +189,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_2
+      name: Mochi_Front_Walk_1
       rect:
         serializedVersion: 2
         x: 112
@@ -197,7 +197,7 @@ TextureImporter:
         width: 16
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -211,7 +211,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_3
+      name: Mochi_Front_Walk_2
       rect:
         serializedVersion: 2
         x: 160
@@ -219,7 +219,7 @@ TextureImporter:
         width: 16
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -233,7 +233,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_4
+      name: Mochi_Back
       rect:
         serializedVersion: 2
         x: 16
@@ -241,7 +241,7 @@ TextureImporter:
         width: 16
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -255,7 +255,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_5
+      name: Mochi_Back_Droop
       rect:
         serializedVersion: 2
         x: 64
@@ -263,7 +263,7 @@ TextureImporter:
         width: 16
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -277,7 +277,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_6
+      name: Mochi_Back_Walk_1
       rect:
         serializedVersion: 2
         x: 112
@@ -285,7 +285,7 @@ TextureImporter:
         width: 16
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -299,7 +299,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_7
+      name: Mochi_Back_Walk_2
       rect:
         serializedVersion: 2
         x: 160
@@ -307,7 +307,7 @@ TextureImporter:
         width: 16
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -321,7 +321,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_8
+      name: Mochi_Left
       rect:
         serializedVersion: 2
         x: 18
@@ -329,7 +329,7 @@ TextureImporter:
         width: 12
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -343,7 +343,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_9
+      name: Mochi_Left_Droop
       rect:
         serializedVersion: 2
         x: 66
@@ -351,7 +351,7 @@ TextureImporter:
         width: 12
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -365,7 +365,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_10
+      name: Mochi_Left_Walk_1
       rect:
         serializedVersion: 2
         x: 114
@@ -373,7 +373,7 @@ TextureImporter:
         width: 12
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -387,7 +387,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_11
+      name: Mochi_Left_Walk_2
       rect:
         serializedVersion: 2
         x: 162
@@ -395,7 +395,7 @@ TextureImporter:
         width: 12
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -409,7 +409,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_12
+      name: Mochi_Right
       rect:
         serializedVersion: 2
         x: 18
@@ -417,7 +417,7 @@ TextureImporter:
         width: 12
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -431,7 +431,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_13
+      name: Mochi_Right_Droop
       rect:
         serializedVersion: 2
         x: 66
@@ -439,7 +439,7 @@ TextureImporter:
         width: 12
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -453,7 +453,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_14
+      name: Mochi_Right_Walk_1
       rect:
         serializedVersion: 2
         x: 114
@@ -461,7 +461,7 @@ TextureImporter:
         width: 12
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -475,7 +475,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_15
+      name: Mochi_Right_Walk_2
       rect:
         serializedVersion: 2
         x: 162
@@ -483,7 +483,7 @@ TextureImporter:
         width: 12
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -500,7 +500,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 831806ea40d1b2b4f9f99d692a133125
     internalID: 0
     vertices: []
     indices: 
@@ -510,22 +510,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Basic Charakter Spritesheet_0: 7595986285605212588
-      Basic Charakter Spritesheet_1: 533925764876870624
-      Basic Charakter Spritesheet_10: -3681317567185701923
-      Basic Charakter Spritesheet_11: -1238460308712774548
-      Basic Charakter Spritesheet_12: 4608324168894639126
-      Basic Charakter Spritesheet_13: 3328763754989776407
-      Basic Charakter Spritesheet_14: 2184765777873843538
-      Basic Charakter Spritesheet_15: 5942205801420598518
-      Basic Charakter Spritesheet_2: 3373380426956494817
-      Basic Charakter Spritesheet_3: 459816943466525491
-      Basic Charakter Spritesheet_4: 5902472224145541201
-      Basic Charakter Spritesheet_5: 5704146936193991084
-      Basic Charakter Spritesheet_6: -5312978444038240032
-      Basic Charakter Spritesheet_7: 1494002176974529289
-      Basic Charakter Spritesheet_8: 1518413977272292722
-      Basic Charakter Spritesheet_9: 1804082577669914558
+      Mochi_Back: 5902472224145541201
+      Mochi_Back_Droop: 5704146936193991084
+      Mochi_Back_Walk_1: -5312978444038240032
+      Mochi_Back_Walk_2: 1494002176974529289
+      Mochi_Front: 7595986285605212588
+      Mochi_Front_Droop: 533925764876870624
+      Mochi_Front_Walk_1: 3373380426956494817
+      Mochi_Front_Walk_2: 459816943466525491
+      Mochi_Left: 1518413977272292722
+      Mochi_Left_Droop: 1804082577669914558
+      Mochi_Left_Walk_1: -3681317567185701923
+      Mochi_Left_Walk_2: -1238460308712774548
+      Mochi_Right: 4608324168894639126
+      Mochi_Right_Droop: 3328763754989776407
+      Mochi_Right_Walk_1: 2184765777873843538
+      Mochi_Right_Walk_2: 5942205801420598518
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

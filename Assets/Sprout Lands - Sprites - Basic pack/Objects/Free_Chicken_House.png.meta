@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -122,7 +122,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Free_Chicken_House_1
+      name: chicken_house_ramp
       rect:
         serializedVersion: 2
         x: 20
@@ -144,12 +144,34 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Free_Chicken_House_2
+      name: full_chicken_hous
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f46e6eb45ac9f4098f2934e0fdd8f5
+      internalID: -879329771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: full_chicken_house
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 40
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -159,8 +181,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89f46e6eb45ac9f4098f2934e0fdd8f5
-      internalID: -879329771
+      spriteID: bd71ed92287e88b439e3e540e9fbdc05
+      internalID: -471197444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chicken_house_left
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 20
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44fd07edce5289f4196cc2ed4d9d39ea
+      internalID: -1992039359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_chicken_house_right
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 20
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecdb0f01e8f465c42be89295c9bf557c
+      internalID: 147446206
       vertices: []
       indices: 
       edges: []
@@ -180,8 +246,12 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Free_Chicken_House_0: 7947428505529812925
-      Free_Chicken_House_1: 202399560
-      Free_Chicken_House_2: -879329771
+      chicken_house_left: -1992039359
+      chicken_house_ramp: 202399560
+      e: -879329771
+      first: -1992039359
+      full_chicken_house: -471197444
+      half_chicken_house_right: 147446206
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
