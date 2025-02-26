@@ -7,6 +7,7 @@ public class ChickenScore : MonoBehaviour
     public GameObject player;
     public TextMeshProUGUI scoreText;
     public UnityEvent chickenFound;
+    public UnityEvent completeChickenQuest;
 
     private int score = 0;
 
@@ -22,6 +23,12 @@ public class ChickenScore : MonoBehaviour
         }
 
         if (score > 0) chickenFound.Invoke();
+        if (score == 3)
+        {
+            scoreText.text = "\n\n\n\nAll chickens collected";
+            completeChickenQuest.Invoke();
+            return;
+        }
         if (score == 1) scoreText.text = "\n\n\n\nMy first friend!";
         else if (score > 1) scoreText.text = $"\n\n\n\n{score} chickens collected";
     }

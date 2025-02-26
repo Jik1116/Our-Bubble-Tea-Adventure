@@ -72,7 +72,7 @@ public class MooGameUI : MonoBehaviour
             positiveOutcome.SetActive(success);
             negativeOutcome.SetActive(!success);
             positiveText.text = $"Saved {cows} cows";
-            negativeText.text = $"{cowsNeeded - cows} more cows needed";
+            negativeText.text = $"Too many cows escaped";
             gameOverScreen.SetActive(true);
         }
     }
