@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -25,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("For External Scripts")]
     public bool isSkidding;
-    public Vector2 directionalInput;
+    public float xAxis;
     public bool jumpTrigger;
     public bool jumpCutTrigger;
 
@@ -42,10 +43,15 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    // public void OnMoveAction(InputAction.CallbackContext context)
+    // {
+    //     xAxis = context.ReadValue<float>();
+    // }
+
     // Update is called once per frame
     void Update()
     {
-        directionalInput = new Vector2(Input.GetAxisRaw("Horizontal"), 0.0f);
+        xAxis = Input.GetAxisRaw("Horizontal");
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -69,12 +75,12 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Scale force based on how close we are to max speed
-        float targetSpeed = directionalInput.x * maxSpeedX;
+        float targetSpeed = xAxis * maxSpeedX;
         targetSpeed = targetSpeed - rb.linearVelocityX;
         float force = forwardSpeed * (targetSpeed / maxSpeedX);
 
         isSkidding = false;
-        if (Math.Sign(directionalInput.x) != Math.Sign(rb.linearVelocityX))
+        if (Math.Sign(xAxis) != Math.Sign(rb.linearVelocityX))
         {
             // Apply a brake force if deccelerating
             force = force * brakeBoost;
@@ -129,7 +135,6 @@ public class PlayerMovement : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        // Gizmos.DrawLine(transform.position, transform.position + new Vector3(directionalInput.x, directionalInput.y, 0.0f));
         if (showForce) Gizmos.DrawLine(transform.position, transform.position + appliedForce.x * Vector3.right);
         if (showGroundCheck) Gizmos.DrawCube(_groundCheckPosition(), _groundCheckSize);
     }

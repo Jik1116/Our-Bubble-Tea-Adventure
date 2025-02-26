@@ -23,10 +23,10 @@ public class PlayerAnimations : MonoBehaviour
         animator.SetBool("onGround", playerMovement.onGroundTime > 0);
         animator.SetFloat("xSpeed", Math.Abs(rb.linearVelocityX));
         animator.SetBool("onSkid", playerMovement.isSkidding);
-        if (playerMovement.directionalInput.x != 0)
+        if (playerMovement.xAxis != 0)
         {
             Vector3 angles = transform.localEulerAngles;
-            angles.y = (playerMovement.directionalInput.x < 0.0f) ? 180f : 0f;
+            angles.y = (playerMovement.xAxis < 0.0f) ? 180f : 0f;
             transform.localEulerAngles = angles;
         }
     }
