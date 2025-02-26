@@ -189,6 +189,76 @@ public partial class @MochiActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""2D_Platformer"",
+            ""id"": ""bb302e11-c0a1-4cae-a8ab-add3d8fb047e"",
+            ""actions"": [
+                {
+                    ""name"": ""move"",
+                    ""type"": ""Value"",
+                    ""id"": ""eed16f79-5e00-4ee1-b99c-c0a9fd3f1a82"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""cc1cc102-3d6c-4766-8c56-e127f4f8614c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""e701f9e7-d6d3-4144-8a8e-ab3df9f63d0b"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""875cc92b-5bb8-40b6-a6bd-8b760fc2223f"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""a68d8c0e-9457-414a-9ede-11e9468a2f6f"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""04f34e52-7389-4cae-b59a-2df9f564cdba"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -198,11 +268,16 @@ public partial class @MochiActions: IInputActionCollection2, IDisposable
         m_TopDown_move = m_TopDown.FindAction("move", throwIfNotFound: true);
         m_TopDown_roll = m_TopDown.FindAction("roll", throwIfNotFound: true);
         m_TopDown_roll_charge = m_TopDown.FindAction("roll_charge", throwIfNotFound: true);
+        // 2D_Platformer
+        m__2D_Platformer = asset.FindActionMap("2D_Platformer", throwIfNotFound: true);
+        m__2D_Platformer_move = m__2D_Platformer.FindAction("move", throwIfNotFound: true);
+        m__2D_Platformer_jump = m__2D_Platformer.FindAction("jump", throwIfNotFound: true);
     }
 
     ~@MochiActions()
     {
         UnityEngine.Debug.Assert(!m_TopDown.enabled, "This will cause a leak and performance issues, MochiActions.TopDown.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m__2D_Platformer.enabled, "This will cause a leak and performance issues, MochiActions._2D_Platformer.Disable() has not been called.");
     }
 
     public void Dispose()
@@ -322,10 +397,69 @@ public partial class @MochiActions: IInputActionCollection2, IDisposable
         }
     }
     public TopDownActions @TopDown => new TopDownActions(this);
+
+    // 2D_Platformer
+    private readonly InputActionMap m__2D_Platformer;
+    private List<I_2D_PlatformerActions> m__2D_PlatformerActionsCallbackInterfaces = new List<I_2D_PlatformerActions>();
+    private readonly InputAction m__2D_Platformer_move;
+    private readonly InputAction m__2D_Platformer_jump;
+    public struct _2D_PlatformerActions
+    {
+        private @MochiActions m_Wrapper;
+        public _2D_PlatformerActions(@MochiActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @move => m_Wrapper.m__2D_Platformer_move;
+        public InputAction @jump => m_Wrapper.m__2D_Platformer_jump;
+        public InputActionMap Get() { return m_Wrapper.m__2D_Platformer; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(_2D_PlatformerActions set) { return set.Get(); }
+        public void AddCallbacks(I_2D_PlatformerActions instance)
+        {
+            if (instance == null || m_Wrapper.m__2D_PlatformerActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m__2D_PlatformerActionsCallbackInterfaces.Add(instance);
+            @move.started += instance.OnMove;
+            @move.performed += instance.OnMove;
+            @move.canceled += instance.OnMove;
+            @jump.started += instance.OnJump;
+            @jump.performed += instance.OnJump;
+            @jump.canceled += instance.OnJump;
+        }
+
+        private void UnregisterCallbacks(I_2D_PlatformerActions instance)
+        {
+            @move.started -= instance.OnMove;
+            @move.performed -= instance.OnMove;
+            @move.canceled -= instance.OnMove;
+            @jump.started -= instance.OnJump;
+            @jump.performed -= instance.OnJump;
+            @jump.canceled -= instance.OnJump;
+        }
+
+        public void RemoveCallbacks(I_2D_PlatformerActions instance)
+        {
+            if (m_Wrapper.m__2D_PlatformerActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(I_2D_PlatformerActions instance)
+        {
+            foreach (var item in m_Wrapper.m__2D_PlatformerActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m__2D_PlatformerActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public _2D_PlatformerActions @_2D_Platformer => new _2D_PlatformerActions(this);
     public interface ITopDownActions
     {
         void OnMove(InputAction.CallbackContext context);
         void OnRoll(InputAction.CallbackContext context);
         void OnRoll_charge(InputAction.CallbackContext context);
+    }
+    public interface I_2D_PlatformerActions
+    {
+        void OnMove(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
     }
 }
