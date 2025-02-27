@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Home.unity
     guid: c3628f04388a6574cab4963bff961f96
+  - enabled: 1
+    path: Assets/Scenes/MooMiniGame.unity
+    guid: 54fa4b5593c45df42a45e9615849a4e8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
