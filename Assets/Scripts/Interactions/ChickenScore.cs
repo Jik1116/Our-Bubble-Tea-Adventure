@@ -9,6 +9,8 @@ public class ChickenScore : MonoBehaviour
     public UnityEvent chickenFound;
     public UnityEvent completeChickenQuest;
 
+    public GameObject chickenParent;
+
     private int score = 0;
 
     public void CountChickens()
@@ -18,7 +20,7 @@ public class ChickenScore : MonoBehaviour
         {
             score++;
             chickenPower.chicken.transform.position = transform.position + (score * 0.2f * Vector3.up);
-            chickenPower.chicken.transform.SetParent(null);
+            chickenPower.chicken.transform.SetParent(chickenParent.transform);
             Destroy(chickenPower);
         }
 
