@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09c1566f5c72c2e419097570c29a2d1c, type: 3}
+  m_Name: SpeedMocchi
+  m_EditorClassIdentifier: 
+  setupActions:
+  - {fileID: 11400000, guid: 381467eaed6fb0641ad04c03f7192afa, type: 2}
+  - {fileID: 11400000, guid: f22be204e5d1f1f438b33861e2f97141, type: 2}
+  actions: []
+  eventTriggeredActions: []
+  exitActions: []
+  transitions:
+  - decision: {fileID: 11400000, guid: 88f8b7edeb520a247bd4596981d6d38a, type: 2}
+    trueState: {fileID: 11400000, guid: d1247b8282b3e83419df29bf473acfec, type: 2}
+    falseState: {fileID: 11400000, guid: bc12ec1ac7ba37f4aa3810ce36016df4, type: 2}
+  sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

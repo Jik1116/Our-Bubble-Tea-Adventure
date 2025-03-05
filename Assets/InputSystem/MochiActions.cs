@@ -178,7 +178,7 @@ public partial class @MochiActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""eb83a392-2d50-4867-a520-98464ed123a4"",
-                    ""path"": ""<Keyboard>/leftShift"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -189,7 +189,7 @@ public partial class @MochiActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""c2bcdd50-4121-44fb-b7c1-4d55a14ed9de"",
-                    ""path"": ""<Keyboard>/leftShift"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
