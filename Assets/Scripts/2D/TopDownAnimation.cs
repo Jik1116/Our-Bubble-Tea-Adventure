@@ -19,8 +19,13 @@ public class TopDownAnimation : MonoBehaviour
 
     void Update()
     {
-        animator.SetFloat("horizontalMovement", rb.linearVelocityX);
-        animator.SetFloat("verticalMovement", rb.linearVelocityY);
+        bool isMoving = rb.linearVelocityX != 0 || rb.linearVelocityY != 0;
+        animator.SetBool("isMoving", isMoving);
+        if (isMoving)
+        {
+            animator.SetFloat("horizontalMovement", rb.linearVelocityX);
+            animator.SetFloat("verticalMovement", rb.linearVelocityY);
+        }
         // animator.SetBool("onSkid", playerMovement.isSkidding);
         // if (playerMovement.xAxis != 0)
         // {
