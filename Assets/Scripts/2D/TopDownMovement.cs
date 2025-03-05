@@ -37,6 +37,18 @@ public class TopDownMovement : MonoBehaviour
         currentBoost = boostCharge;
         currentDecay = 0.9f;
     }
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+        Collider2D[] colliders = Physics2D.OverlapPointAll(new Vector2(transform.position.x, transform.position.y));
+        foreach (Collider2D collider in colliders)
+        {
+            SimpleTrigger trigger = collider.gameObject.GetComponent<SimpleTrigger>();
+            if (trigger == null) continue;
+            trigger.Trigger();
+        }
+    }
+
 
     // Update is called once per frame
     void FixedUpdate()

@@ -53,6 +53,15 @@ public partial class @MochiActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": ""Hold"",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""565ace65-b092-41bd-a82f-b0f285164f95"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -169,7 +178,7 @@ public partial class @MochiActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""eb83a392-2d50-4867-a520-98464ed123a4"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""path"": ""<Keyboard>/leftShift"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -180,11 +189,22 @@ public partial class @MochiActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""c2bcdd50-4121-44fb-b7c1-4d55a14ed9de"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""path"": ""<Keyboard>/leftShift"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""roll_charge"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""327ee62d-75c4-4194-9ced-659c014b4b28"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -268,6 +288,7 @@ public partial class @MochiActions: IInputActionCollection2, IDisposable
         m_TopDown_move = m_TopDown.FindAction("move", throwIfNotFound: true);
         m_TopDown_roll = m_TopDown.FindAction("roll", throwIfNotFound: true);
         m_TopDown_roll_charge = m_TopDown.FindAction("roll_charge", throwIfNotFound: true);
+        m_TopDown_Interact = m_TopDown.FindAction("Interact", throwIfNotFound: true);
         // 2D_Platformer
         m__2D_Platformer = asset.FindActionMap("2D_Platformer", throwIfNotFound: true);
         m__2D_Platformer_move = m__2D_Platformer.FindAction("move", throwIfNotFound: true);
@@ -342,6 +363,7 @@ public partial class @MochiActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_TopDown_move;
     private readonly InputAction m_TopDown_roll;
     private readonly InputAction m_TopDown_roll_charge;
+    private readonly InputAction m_TopDown_Interact;
     public struct TopDownActions
     {
         private @MochiActions m_Wrapper;
@@ -349,6 +371,7 @@ public partial class @MochiActions: IInputActionCollection2, IDisposable
         public InputAction @move => m_Wrapper.m_TopDown_move;
         public InputAction @roll => m_Wrapper.m_TopDown_roll;
         public InputAction @roll_charge => m_Wrapper.m_TopDown_roll_charge;
+        public InputAction @Interact => m_Wrapper.m_TopDown_Interact;
         public InputActionMap Get() { return m_Wrapper.m_TopDown; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -367,6 +390,9 @@ public partial class @MochiActions: IInputActionCollection2, IDisposable
             @roll_charge.started += instance.OnRoll_charge;
             @roll_charge.performed += instance.OnRoll_charge;
             @roll_charge.canceled += instance.OnRoll_charge;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
         }
 
         private void UnregisterCallbacks(ITopDownActions instance)
@@ -380,6 +406,9 @@ public partial class @MochiActions: IInputActionCollection2, IDisposable
             @roll_charge.started -= instance.OnRoll_charge;
             @roll_charge.performed -= instance.OnRoll_charge;
             @roll_charge.canceled -= instance.OnRoll_charge;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
         }
 
         public void RemoveCallbacks(ITopDownActions instance)
@@ -456,6 +485,7 @@ public partial class @MochiActions: IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnRoll(InputAction.CallbackContext context);
         void OnRoll_charge(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
     }
     public interface I_2D_PlatformerActions
     {

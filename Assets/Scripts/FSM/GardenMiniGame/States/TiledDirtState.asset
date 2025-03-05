@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09c1566f5c72c2e419097570c29a2d1c, type: 3}
+  m_Name: TiledDirtState
+  m_EditorClassIdentifier: 
+  setupActions:
+  - {fileID: 11400000, guid: 5cb6fb5238395a74cb7ecf3e0bebabae, type: 2}
+  actions: []
+  eventTriggeredActions:
+  - action: {fileID: 11400000, guid: 5d82bf4719f1977428caca5fda90cd73, type: 2}
+    type: -1
+  exitActions: []
+  transitions: []
+  sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
