@@ -21,6 +21,7 @@ public class TopDownAnimation : MonoBehaviour
     {
         bool isMoving = rb.linearVelocityX != 0 || rb.linearVelocityY != 0;
         animator.SetBool("isMoving", isMoving);
+        animator.SetFloat("speed", Mathf.Sqrt(Mathf.Pow(rb.linearVelocityX, 2) + Mathf.Pow(rb.linearVelocityY, 2)) / 5);
         if (isMoving)
         {
             animator.SetFloat("horizontalMovement", rb.linearVelocityX);
