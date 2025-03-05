@@ -30,11 +30,13 @@ public class MooGameUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI timeText;
 
     public float gameTime = 30.0f;
-    public int cows = 30;
+    public int startCows = 30;
+    public IntVariable cows;
 
     public int cowsNeeded = 20;
 
     public UnityEvent<int> spawnCows;
+    public string score_prefix = "Cows";
 
     [SerializeField] private GameObject gameOverScreen;
     [SerializeField] private GameObject positiveOutcome;
@@ -45,9 +47,10 @@ public class MooGameUI : MonoBehaviour
 
     void Start()
     {
-        cowText.text = $"Cows: {cows}";
+        cows.SetValue(startCows);
+        cowText.text = $"{score_prefix}: {cows.Value}";
         timeText.text = $"Time: {formatTime(gameTime)}";
-        spawnCows.Invoke(cows);
+        spawnCows.Invoke(cows.Value);
     }
 
     string formatTime(float time)
@@ -57,22 +60,22 @@ public class MooGameUI : MonoBehaviour
         return string.Format("{0:00}:{1:00}", min, sec);
     }
 
-    public void CowDown() => --cows;
+    public void CowDown() => cows.SetValue(cows.Value - 1);
+    public void CowUp() => cows.SetValue(cows.Value + 1);
 
     void Update()
     {
         gameTime -= Time.deltaTime;
-        cowText.text = $"Cows: {cows}";
+        cowText.text = $"{score_prefix}: {cows.Value}";
         timeText.text = $"Time: {formatTime(gameTime)}";
 
-        if (gameTime <= 0.0f || cows < cowsNeeded)
+        if (gameTime <= 0.0f || cows.Value < cowsNeeded)
         {
             Time.timeScale = 0.0f;
-            bool success = cows >= cowsNeeded;
+            bool success = cows.Value >= cowsNeeded;
             positiveOutcome.SetActive(success);
             negativeOutcome.SetActive(!success);
-            positiveText.text = $"Saved {cows} cows";
-            negativeText.text = $"Too many cows escaped";
+            positiveText.text = $"{score_prefix}: {cows.Value}";
             gameOverScreen.SetActive(true);
         }
     }

@@ -1319,9 +1319,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '4 more cows needed
-
-'
+  m_text: You let to many cows escape
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dca170e1108d07845a0a7d2e1fc6d5ec, type: 2}
   m_sharedMaterial: {fileID: 4564449212537025578, guid: dca170e1108d07845a0a7d2e1fc6d5ec, type: 2}
@@ -6312,7 +6310,8 @@ MonoBehaviour:
   cowText: {fileID: 464357527}
   timeText: {fileID: 1695144608}
   gameTime: 30
-  cows: 30
+  startCows: 30
+  cows: {fileID: 11400000, guid: 78ef2ba1a1bb5c649bfdc7c1ff34f0ce, type: 2}
   cowsNeeded: 20
   spawnCows:
     m_PersistentCalls:
@@ -6329,6 +6328,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  score_prefix: Cows
   gameOverScreen: {fileID: 1345904073}
   positiveOutcome: {fileID: 1933533588}
   negativeOutcome: {fileID: 945116736}
